@@ -1,0 +1,1 @@
+CKEDITOR.plugins.setLang("mc_template","en",{toolbar:"Insert Template"});

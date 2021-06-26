@@ -1,0 +1,41 @@
+<?php
+$path_users = storage_path().DIRECTORY_SEPARATOR.'users'.DIRECTORY_SEPARATOR;
+$path_geo = base_path().DIRECTORY_SEPARATOR.'geo'.DIRECTORY_SEPARATOR;
+$path_common = storage_path().DIRECTORY_SEPARATOR.'app'.DIRECTORY_SEPARATOR.'public'.DIRECTORY_SEPARATOR;
+return [
+  'groups' => [
+    'lists' => 1,
+    'broadcasts' => 2,
+    'sending_server' => 3,
+    'suppression' => 4,
+    'drips' => 5,
+  ],
+  'app_id' => 1,
+  'superadmin' => 1,
+  'threads' => 5,
+  'dkim_selector' => 'mailcarry',
+  'dmarc_selector' => 'dmarc',
+  'tracking_selector' => 'track',
+  'path_export_list' => $path_users.'[user-id]'.DIRECTORY_SEPARATOR.'export'.DIRECTORY_SEPARATOR.'list'.DIRECTORY_SEPARATOR,
+  'path_export_verify' => $path_users.'[user-id]'.DIRECTORY_SEPARATOR.'export'.DIRECTORY_SEPARATOR.'verify'.DIRECTORY_SEPARATOR,
+  'path_export_blacklist' => $path_users.'[user-id]'.DIRECTORY_SEPARATOR.'export'.DIRECTORY_SEPARATOR.'blacklist'.DIRECTORY_SEPARATOR,
+  'path_export_segment' => $path_users.'[user-id]'.DIRECTORY_SEPARATOR.'export'.DIRECTORY_SEPARATOR.'segment'.DIRECTORY_SEPARATOR,
+  'path_export_stat_campaign' => $path_users.'[user-id]'.DIRECTORY_SEPARATOR.'export'.DIRECTORY_SEPARATOR.'stats'.DIRECTORY_SEPARATOR.'campaigns'.DIRECTORY_SEPARATOR,
+  'path_export_stat_drip' => $path_users.'[user-id]'.DIRECTORY_SEPARATOR.'export'.DIRECTORY_SEPARATOR.'stats'.DIRECTORY_SEPARATOR.'drip'.DIRECTORY_SEPARATOR,
+  'path_export_stat_auto_followup' => $path_users.'[user-id]'.DIRECTORY_SEPARATOR.'export'.DIRECTORY_SEPARATOR.'stats'.DIRECTORY_SEPARATOR.'auto_followup'.DIRECTORY_SEPARATOR,
+  'path_import_list' => $path_users.'[user-id]'.DIRECTORY_SEPARATOR.'import'.DIRECTORY_SEPARATOR.'list'.DIRECTORY_SEPARATOR,
+  'path_import_blacklist' => $path_users.'[user-id]'.DIRECTORY_SEPARATOR.'import'.DIRECTORY_SEPARATOR.'blacklist'.DIRECTORY_SEPARATOR,
+  'path_downloads' => $path_users.'[user-id]'.DIRECTORY_SEPARATOR.'downloads'.DIRECTORY_SEPARATOR,
+  'path_schedule_campaign' => $path_users.'[user-id]'.DIRECTORY_SEPARATOR.'schedule_campaign'.DIRECTORY_SEPARATOR,
+  'path_templates' => $path_users.'[user-id]'.DIRECTORY_SEPARATOR.'templates'.DIRECTORY_SEPARATOR,
+  'path_backup' => $path_users.'[user-id]'.DIRECTORY_SEPARATOR.'backup'.DIRECTORY_SEPARATOR,
+  'path_pmta' => $path_users.'[user-id]'.DIRECTORY_SEPARATOR.'pmta'.DIRECTORY_SEPARATOR,
+  'path_maxmind_geo_db' => $path_geo.'GeoLite2-City.mmdb',
+  'path_login_img' => $path_common,
+  'mailcarry_verify' => 'https://mailcarry.com/verify.php?',
+  'version_storage_path' => $path_common,
+  'version_local_path' => '/storage/app/public/version',
+  'version_live_path' => 'https://mailcarry.com/version',
+  'mailcarry_url' => 'https://mailcarry.com/',
+  'mailcarry_download_url' => 'https://mailcarry.com/storage/',
+];
